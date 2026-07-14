@@ -1,0 +1,175 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.drift.droiddrift"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="28"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:4:5-67
+11-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+12-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:5:5-77
+12-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:5:22-74
+13
+14    <!-- Permission to inject events (requires ADB grant or system signature) -->
+15    <uses-permission android:name="android.permission.INJECT_EVENTS" />
+15-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:8:5-72
+15-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:8:22-69
+16
+17    <!-- Permission to create virtual devices in Android 13+ (requires ADB grant or companion role) -->
+18    <uses-permission android:name="android.permission.CREATE_VIRTUAL_DEVICE" />
+18-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:11:5-80
+18-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:11:22-77
+19
+20    <permission
+20-->[androidx.core:core:1.13.1] /Users/falak/.gradle/caches/transforms-4/c65f0e5c9595e6cab0102b111a429c61/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+21        android:name="com.drift.droiddrift.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+21-->[androidx.core:core:1.13.1] /Users/falak/.gradle/caches/transforms-4/c65f0e5c9595e6cab0102b111a429c61/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+22        android:protectionLevel="signature" />
+22-->[androidx.core:core:1.13.1] /Users/falak/.gradle/caches/transforms-4/c65f0e5c9595e6cab0102b111a429c61/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+23
+24    <uses-permission android:name="com.drift.droiddrift.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+24-->[androidx.core:core:1.13.1] /Users/falak/.gradle/caches/transforms-4/c65f0e5c9595e6cab0102b111a429c61/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+24-->[androidx.core:core:1.13.1] /Users/falak/.gradle/caches/transforms-4/c65f0e5c9595e6cab0102b111a429c61/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+25
+26    <application
+26-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:13:5-41:19
+27        android:allowBackup="true"
+27-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:14:9-35
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.13.1] /Users/falak/.gradle/caches/transforms-4/c65f0e5c9595e6cab0102b111a429c61/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+29        android:debuggable="true"
+30        android:extractNativeLibs="false"
+31        android:label="@string/app_name"
+31-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:15:9-41
+32        android:supportsRtl="true" >
+32-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:16:9-35
+33        <activity
+33-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:18:9-26:20
+34            android:name="com.drift.droiddrift.MainActivity"
+34-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:19:13-41
+35            android:exported="true"
+35-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:20:13-36
+36            android:theme="@android:style/Theme.Material.NoActionBar" >
+36-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:21:13-70
+37            <intent-filter>
+37-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:22:13-25:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:23:17-69
+38-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:23:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:24:17-77
+40-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:24:27-74
+41            </intent-filter>
+42        </activity>
+43
+44        <!-- Accessibility Service to act as fallback for injecting inputs on older platforms -->
+45        <service
+45-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:29:9-39:19
+46            android:name="com.drift.droiddrift.InputAccessibilityService"
+46-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:30:13-54
+47            android:exported="false"
+47-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:32:13-37
+48            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+48-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:31:13-79
+49            <intent-filter>
+49-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:33:13-35:29
+50                <action android:name="android.accessibilityservice.AccessibilityService" />
+50-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:34:17-92
+50-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:34:25-89
+51            </intent-filter>
+52
+53            <meta-data
+53-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:36:13-38:72
+54                android:name="android.accessibilityservice"
+54-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:37:17-60
+55                android:resource="@xml/accessibility_service_config" />
+55-->/Users/falak/Documents/Falak/Atelic/Swift/Drift/DroidDrift/app/src/main/AndroidManifest.xml:38:17-69
+56        </service>
+57
+58        <activity
+58-->[androidx.compose.ui:ui-tooling-android:1.6.7] /Users/falak/.gradle/caches/transforms-4/fd13658ecc1a02f83a7192b06b56b89b/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+59            android:name="androidx.compose.ui.tooling.PreviewActivity"
+59-->[androidx.compose.ui:ui-tooling-android:1.6.7] /Users/falak/.gradle/caches/transforms-4/fd13658ecc1a02f83a7192b06b56b89b/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+60            android:exported="true" />
+60-->[androidx.compose.ui:ui-tooling-android:1.6.7] /Users/falak/.gradle/caches/transforms-4/fd13658ecc1a02f83a7192b06b56b89b/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+61        <activity
+61-->[androidx.compose.ui:ui-test-manifest:1.6.7] /Users/falak/.gradle/caches/transforms-4/bc3a1f7ebfd475b16985da65c6c800e7/transformed/ui-test-manifest-1.6.7/AndroidManifest.xml:23:9-25:39
+62            android:name="androidx.activity.ComponentActivity"
+62-->[androidx.compose.ui:ui-test-manifest:1.6.7] /Users/falak/.gradle/caches/transforms-4/bc3a1f7ebfd475b16985da65c6c800e7/transformed/ui-test-manifest-1.6.7/AndroidManifest.xml:24:13-63
+63            android:exported="true" />
+63-->[androidx.compose.ui:ui-test-manifest:1.6.7] /Users/falak/.gradle/caches/transforms-4/bc3a1f7ebfd475b16985da65c6c800e7/transformed/ui-test-manifest-1.6.7/AndroidManifest.xml:25:13-36
+64
+65        <provider
+65-->[androidx.emoji2:emoji2:1.3.0] /Users/falak/.gradle/caches/transforms-4/8ccb595b09b7fa4e1873467afd8f1b41/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+66            android:name="androidx.startup.InitializationProvider"
+66-->[androidx.emoji2:emoji2:1.3.0] /Users/falak/.gradle/caches/transforms-4/8ccb595b09b7fa4e1873467afd8f1b41/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+67            android:authorities="com.drift.droiddrift.androidx-startup"
+67-->[androidx.emoji2:emoji2:1.3.0] /Users/falak/.gradle/caches/transforms-4/8ccb595b09b7fa4e1873467afd8f1b41/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+68            android:exported="false" >
+68-->[androidx.emoji2:emoji2:1.3.0] /Users/falak/.gradle/caches/transforms-4/8ccb595b09b7fa4e1873467afd8f1b41/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+69            <meta-data
+69-->[androidx.emoji2:emoji2:1.3.0] /Users/falak/.gradle/caches/transforms-4/8ccb595b09b7fa4e1873467afd8f1b41/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+70                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+70-->[androidx.emoji2:emoji2:1.3.0] /Users/falak/.gradle/caches/transforms-4/8ccb595b09b7fa4e1873467afd8f1b41/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+71                android:value="androidx.startup" />
+71-->[androidx.emoji2:emoji2:1.3.0] /Users/falak/.gradle/caches/transforms-4/8ccb595b09b7fa4e1873467afd8f1b41/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+72            <meta-data
+72-->[androidx.lifecycle:lifecycle-process:2.8.1] /Users/falak/.gradle/caches/transforms-4/3083f130f2c2a7bb8392add7b56c6eb1/transformed/lifecycle-process-2.8.1/AndroidManifest.xml:29:13-31:52
+73                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+73-->[androidx.lifecycle:lifecycle-process:2.8.1] /Users/falak/.gradle/caches/transforms-4/3083f130f2c2a7bb8392add7b56c6eb1/transformed/lifecycle-process-2.8.1/AndroidManifest.xml:30:17-78
+74                android:value="androidx.startup" />
+74-->[androidx.lifecycle:lifecycle-process:2.8.1] /Users/falak/.gradle/caches/transforms-4/3083f130f2c2a7bb8392add7b56c6eb1/transformed/lifecycle-process-2.8.1/AndroidManifest.xml:31:17-49
+75            <meta-data
+75-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+76                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+76-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+77                android:value="androidx.startup" />
+77-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+78        </provider>
+79
+80        <receiver
+80-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+81            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+81-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+82            android:directBootAware="false"
+82-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+83            android:enabled="true"
+83-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+84            android:exported="true"
+84-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+85            android:permission="android.permission.DUMP" >
+85-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+86            <intent-filter>
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+87                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+88            </intent-filter>
+89            <intent-filter>
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+90                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+91            </intent-filter>
+92            <intent-filter>
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+93                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+94            </intent-filter>
+95            <intent-filter>
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+96                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/falak/.gradle/caches/transforms-4/d24f5762f6af2d16a1c6ead9a48f90bd/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+97            </intent-filter>
+98        </receiver>
+99    </application>
+100
+101</manifest>
