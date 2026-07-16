@@ -7,15 +7,21 @@ import org.java_websocket.server.WebSocketServer
 import org.json.JSONObject
 import java.net.InetSocketAddress
 
-class SocketServer(port: Int, private val simulator: InputSimulator) : WebSocketServer(InetSocketAddress(port)) {
+class SocketServer(port: Int, private val listener: SocketEventListener) : WebSocketServer(InetSocketAddress(port)) {
     private val TAG = "SocketServer"
-    private var activeConnection: WebSocket? = null
+    var activeConnection: WebSocket? = null
+        private set
 
-    init {
-        // Set simulator exit callback to send an exit event back to the macOS transmitter
-        simulator.onExitLeft = {
-            Log.d(TAG, "Virtual cursor exited left display bounds. Sending exit message back to macOS.")
+    fun hasActiveConnection(): Boolean {
+        return activeConnection != null
+    }
+
+    fun sendExit() {
+        Log.d(TAG, "Sending exit message back to macOS.")
+        try {
             activeConnection?.send("{\"type\": \"exit\"}")
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to send exit message: ${e.message}")
         }
     }
 
@@ -40,27 +46,27 @@ class SocketServer(port: Int, private val simulator: InputSimulator) : WebSocket
             when (type) {
                 "enter" -> {
                     val yRatio = json.optDouble("y_ratio", 0.5).toFloat()
-                    simulator.resetCursor(yRatio)
+                    listener.onEnter(yRatio)
                 }
                 "mouse_move" -> {
                     val dx = json.optDouble("dx", 0.0).toFloat()
                     val dy = json.optDouble("dy", 0.0).toFloat()
-                    simulator.injectMouseMove(dx, dy)
+                    listener.onMouseMove(dx, dy)
                 }
                 "mouse_button" -> {
                     val button = json.optString("button")
                     val state = json.optString("state")
-                    simulator.injectMouseButton(button, state)
+                    listener.onMouseButton(button, state)
                 }
                 "keyboard_key" -> {
                     val keycode = json.optInt("keycode")
                     val state = json.optString("state")
-                    simulator.injectKey(keycode, state)
+                    listener.onKeyboardKey(keycode, state)
                 }
                 "scroll" -> {
                     val dx = json.optDouble("dx", 0.0).toFloat()
                     val dy = json.optDouble("dy", 0.0).toFloat()
-                    simulator.injectScroll(dx, dy)
+                    listener.onScroll(dx, dy)
                 }
                 "ping" -> {
                     conn?.send("{\"type\": \"pong\"}")
@@ -79,4 +85,12 @@ class SocketServer(port: Int, private val simulator: InputSimulator) : WebSocket
     override fun onStart() {
         Log.i(TAG, "WebSocket server successfully started on port: $port")
     }
+}
+
+interface SocketEventListener {
+    fun onEnter(yRatio: Float)
+    fun onMouseMove(dx: Float, dy: Float)
+    fun onMouseButton(button: String, state: String)
+    fun onKeyboardKey(keycode: Int, state: String)
+    fun onScroll(dx: Float, dy: Float)
 }

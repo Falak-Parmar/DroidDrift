@@ -139,7 +139,7 @@ class InputSimulator {
             this.x = currentX
             this.y = currentY
             setAxisValue(MotionEvent.AXIS_VSCROLL, dy)
-            setAxisValue(MotionEvent.AXIS_HSCROLL, dx)
+            setAxisValue(MotionEvent.AXIS_HSCROLL, -dx)
         }
         
         val event = MotionEvent.obtain(
@@ -172,6 +172,10 @@ class InputSimulator {
     private fun mapMacToAndroidKey(macKeycode: Int): Int {
         // Simple mapping for common keys
         return when (macKeycode) {
+            10001 -> KeyEvent.KEYCODE_HOME
+            10002 -> KeyEvent.KEYCODE_BACK
+            10003 -> KeyEvent.KEYCODE_APP_SWITCH
+            10004 -> KeyEvent.KEYCODE_NOTIFICATION
             0 -> KeyEvent.KEYCODE_A
             1 -> KeyEvent.KEYCODE_S
             2 -> KeyEvent.KEYCODE_D
