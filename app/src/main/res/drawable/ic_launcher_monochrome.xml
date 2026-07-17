@@ -1,0 +1,35 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Background shape (dark theme friendly squircle) -->
+    <path
+        android:fillColor="#121212"
+        android:pathData="M24,12 L84,12 C90.6,12 96,17.4 96,24 L96,84 C96,90.6 90.6,96 84,96 L24,96 C17.4,96 12,90.6 12,84 L12,24 C12,17.4 17.4,12 24,12 Z"/>
+        
+    <!-- Outer phone silhouette frame -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:pathData="M38,22h32c3.5,0,6.5,3,6.5,6.5v51c0,3.5-3,6.5-6.5,6.5H38c-3.5,0-6.5-3-6.5-6.5v-51C31.5,25,34.5,22,38,22z"/>
+        
+    <!-- Home bar indicator -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M48,80h12"/>
+        
+    <!-- Camera punch hole -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,28m-1.5,0a1.5,1.5,0,1,1,3,0a1.5,1.5,0,1,1,-3,0"/>
+        
+    <!-- Drifting Cursor arrow entering phone space -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,32 L40,36 L34,42 L48,56 L42,62 L28,48 L22,54 Z"/>
+</vector>
