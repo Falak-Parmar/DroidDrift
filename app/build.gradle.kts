@@ -64,6 +64,9 @@ dependencies {
     // WebSocket Server (lightweight Java library)
     implementation("org.java-websocket:Java-WebSocket:1.5.7")
 
+    // Image loading library
+    implementation("io.coil-kt:coil-compose:2.6.0")
+
     // Testing
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
