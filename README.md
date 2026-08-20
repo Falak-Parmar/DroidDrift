@@ -122,3 +122,14 @@ The pill-shaped floating bottom nav bar contains three panels:
 
 Made by [Falak Parmar](https://github.com/Falak-Parmar)  
 Part of the [Drift](https://github.com/Falak-Parmar/Drift) project.
+
+## Trust & Transparency notes
+
+- **Source & Attribution**: DroidDrift is the official Android receiver component for Project Drift. It uses custom service wrappers mapping to Android's accessibility frameworks and the hidden Java binder API (`IInputManager`).
+- **Motive**: Part of a custom system to enable Universal Control capabilities on non-rooted Android tablets and phones, providing a fluid side-screen pointer environment.
+- **Modifications**: Integrated connection diagnostics checklists, multiple appearance profiles, and dual-mode input routing (ADB injection + Accessibility API fallback).
+- **Limitations**:
+  - Requires executing shell process commands via ADB (`app_process`) on every device reconnect or boot to enable the high-performance input injection daemon.
+  - The accessibility gesture framework (`dispatchGesture`) is constrained to standard system click actions and does not support native hardware hover pointer states.
+- **Tooling & AI Usage**: This codebase has been developed completely using the Antigravity CLI assistant, as I do not have prior experience with Kotlin or Android app development. All layouts, connection loops, and service binders were generated and debugged through iterative AI-driven conversations.
+
